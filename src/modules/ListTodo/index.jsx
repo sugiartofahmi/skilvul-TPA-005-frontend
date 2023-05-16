@@ -8,25 +8,21 @@ import { compledeTodo, deleteTodo } from "../../store/todoSlice";
 const ListTodo = ({ getTodo }) => {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
-  const handleCheckbox = (id) => {
+  const handleCheckbox = (id) =>
     dispatch(
       compledeTodo({
         id: id,
       })
     );
-  };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id) =>
     dispatch(
       deleteTodo({
         id: id,
       })
     );
-  };
 
-  const handleGetData = (id, todo) => {
-    getTodo(id, todo, true);
-  };
+  const handleGetData = (id, todo) => getTodo(id, todo);
 
   return (
     <section className="flex flex-col w-full h-full gap-y-[20px]">
@@ -42,7 +38,7 @@ const ListTodo = ({ getTodo }) => {
               isChecked={el.completed}
             />
             <h1
-              className={`font-semibold capitalize ${
+              className={`font-semibold capitalize w-[250px] line-clamp-1  ${
                 el.completed && `line-through decoration-2`
               } `}
             >
