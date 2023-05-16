@@ -12,11 +12,12 @@ const App = () => {
         <section className="flex flex-col w-full gap-y-[45px] ">
           <section className="flex flex-row w-full gap-x-[20px]">
             <input
-              className="w-4/5 border-2 border-[#CFD7DC] rounded p-2 placeholder:font-bold placeholder:text-[#c6d0d6]"
+              className=" text-[#293845] capitalize w-4/5 border-2 border-[#CFD7DC] rounded p-2 placeholder:font-bold placeholder:text-[#c6d0d6]  focus:outline-none focus:ring-0"
               placeholder="What to do"
               type="text"
             />
-            <button className="w-1/5 bg-[#6459F5] rounded text-white font-bold p-2">
+
+            <button className="w-1/5 bg-[#6459F5] hover:bg-[#4134f8]   rounded text-white font-bold p-2">
               Add
             </button>
           </section>
@@ -37,7 +38,7 @@ const App = () => {
                 <section className="flex items-center gap-x-[10px]">
                   <input
                     type="checkbox"
-                    class="cursor-pointer w-7 h-7 border-[2px] border-[#CFD7DC] focus:ring-0 text-[#1BAF9F]"
+                    class="cursor-pointer w-7 h-7 focus:ring-0 accent-gray-500 "
                   />
                   <h1 className="font-semibold">Buy Milk</h1>
                 </section>
@@ -51,7 +52,7 @@ const App = () => {
                   <input
                     checked
                     type="checkbox"
-                    class="cursor-pointer w-7 h-7 border-[2px] border-[#CFD7DC] focus:ring-0 text-[#1BAF9F]"
+                    class="cursor-pointer w-7 h-7 focus:ring-0 accent-gray-500"
                   />
                   <h1 className="font-semibold line-through decoration-2">
                     Buy Egg
@@ -66,7 +67,7 @@ const App = () => {
                 <section className="flex items-center gap-x-[10px]">
                   <input
                     type="checkbox"
-                    class="cursor-pointer w-7 h-7 border-[2px] border-[#CFD7DC] focus:ring-0 text-[#1BAF9F]"
+                    class="cursor-pointer w-7 h-7 focus:ring-0 accent-gray-500"
                   />
                   <h1 className="font-semibold">Buy T-Shirt</h1>
                 </section>
