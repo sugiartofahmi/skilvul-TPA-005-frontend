@@ -3,7 +3,7 @@ import { RiPencilFill } from "react-icons/ri";
 import Checkbox from "../../components/Checkbox";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { compledeTodo, deleteTodo } from "../../store/todoSlice";
+import { compledeTodo, deleteTodo } from "../../store/todosSlice";
 
 const ListTodo = ({ getTodo }) => {
   const todos = useSelector((state) => state.todos);

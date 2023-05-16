@@ -2,7 +2,7 @@ import TextField from "../../components/TextField";
 import Button from "../../components/Button";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo, updateTodo } from "../../store/todoSlice";
+import { addTodo, updateTodo } from "../../store/todosSlice";
 const InputTodo = ({ id, todoUpdate, isUpdate, done }) => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
@@ -29,6 +29,7 @@ const InputTodo = ({ id, todoUpdate, isUpdate, done }) => {
   useEffect(() => {
     setValue(todoUpdate);
   }, [todoUpdate]);
+
   return (
     <section className="flex flex-row w-full gap-x-[20px]">
       <TextField
