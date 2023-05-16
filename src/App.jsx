@@ -10,15 +10,13 @@ const App = () => {
   const [todo, setTodo] = useState("");
   const [isUpdate, setIsUpdate] = useState(false);
 
-  const getTodo = (id, todo, isUpdate) => {
+  const getTodo = (id, todo) => {
     setId(id);
     setTodo(todo);
-    setIsUpdate(isUpdate);
+    setIsUpdate(true);
   };
 
-  const updateDone = (update) => {
-    setIsUpdate(update);
-  };
+  const updateDone = () => setIsUpdate(false);
 
   return (
     <MainLayout>

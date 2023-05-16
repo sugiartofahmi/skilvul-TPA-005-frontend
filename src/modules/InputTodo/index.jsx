@@ -6,27 +6,26 @@ import { addTodo, updateTodo } from "../../store/todoSlice";
 const InputTodo = ({ id, todoUpdate, isUpdate, done }) => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
-  const handleSubmit = () => {
+  const handleSubmit = () =>
     value != "" &&
-      (dispatch(
-        addTodo({
-          todo: value,
-        })
-      ),
-      setValue(""));
-  };
+    (dispatch(
+      addTodo({
+        todo: value,
+      })
+    ),
+    setValue(""));
 
-  const handleUpdate = () => {
+  const handleUpdate = () =>
     value != "" &&
-      dispatch(
-        updateTodo({
-          id: id,
-          todo: value,
-        })
-      ),
-      setValue("");
-    done(false);
-  };
+    (dispatch(
+      updateTodo({
+        id: id,
+        todo: value,
+      })
+    ),
+    setValue(""),
+    done());
+
   useEffect(() => {
     setValue(todoUpdate);
   }, [todoUpdate]);
