@@ -2,23 +2,27 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const todosSlice = createSlice({
   name: "todos",
-  initialState: [
-    {
-      id: 1,
-      todo: "Learn React",
-      completed: true,
-    },
-    {
-      id: 2,
-      todo: "Learn Redux",
-      completed: true,
-    },
-    {
-      id: 3,
-      todo: "Learn Docker",
-      completed: false,
-    },
-  ],
+  initialState: {
+    todos: [
+      {
+        id: 1,
+        todo: "Learn React",
+        completed: true,
+      },
+      {
+        id: 2,
+        todo: "Learn Redux",
+        completed: true,
+      },
+      {
+        id: 3,
+        todo: "Learn Docker",
+        completed: false,
+      },
+    ],
+    filterBy: "ALL",
+  },
+
   reducers: {
     addTodo: (state, action) => {
       const newTodo = {
@@ -26,25 +30,32 @@ export const todosSlice = createSlice({
         todo: action.payload.todo,
         completed: false,
       };
-      return [...state, newTodo];
+      state.todos = [...state.todos, newTodo];
     },
     deleteTodo: (state, action) => {
-      return state.filter((item) => item.id !== action.payload.id);
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id);
     },
+
     compledeTodo: (state, action) => {
-      return state.map((el) =>
+      state.todos = state.todos.map((el) =>
         el.id == action.payload.id ? { ...el, completed: !el.completed } : el
       );
     },
     updateTodo: (state, action) => {
-      return state.map((el) =>
+      state.todos = state.todos.map((el) =>
         el.id == action.payload.id ? { ...el, todo: action.payload.todo } : el
       );
+    },
+    updateFilter: (state, action) => {
+      // state.todos = state.todos.map((el) =>
+      //   el.id == action.payload.id ? { ...el, todo: action.payload.todo } : el
+      // );
+      state.filterBy = action.payload.filterBy;
     },
   },
 });
 
-export const { addTodo, deleteTodo, compledeTodo, updateTodo } =
+export const { addTodo, deleteTodo, compledeTodo, updateTodo, updateFilter } =
   todosSlice.actions;
 
 export default todosSlice.reducer;
