@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo, updateTodo } from "../../store/todosSlice";
+import { PropTypes } from "prop-types";
 const InputTodo = ({ id, todoUpdate, isUpdate, done }) => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
@@ -45,6 +46,13 @@ const InputTodo = ({ id, todoUpdate, isUpdate, done }) => {
       />
     </section>
   );
+};
+
+InputTodo.propTypes = {
+  id: PropTypes.number,
+  todoUpdate: PropTypes.string,
+  isUpdate: PropTypes.bool,
+  done: PropTypes.func,
 };
 
 export default InputTodo;

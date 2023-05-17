@@ -1,7 +1,6 @@
 import MainLayout from "./layouts/MainLayout";
 import ContentLayout from "./layouts/ContentLayout";
 import InputTodo from "./modules/InputTodo";
-import FilterTodo from "./modules/FilterTodo";
 import ListTodo from "./modules/ListTodo";
 import { useState } from "react";
 
@@ -31,10 +30,8 @@ const App = () => {
             isUpdate={isUpdate}
             done={updateDone}
           />
-          <section className="flex flex-col w-full gap-y-[20px] ">
-            <FilterTodo />
-            <ListTodo getTodo={getTodo} />
-          </section>
+
+          <ListTodo getTodo={getTodo} />
         </section>
       </ContentLayout>
     </MainLayout>
