@@ -32,7 +32,7 @@ const InputTodo = ({ id, todoUpdate, isUpdate, done }) => {
   }, [todoUpdate]);
 
   return (
-    <section className="flex flex-row w-full gap-x-[20px]">
+    <section className="flex flex-row w-full md:gap-x-[20px] gap-x-[10px]">
       <TextField
         name="inputTodo"
         text="What to do"
@@ -41,7 +41,7 @@ const InputTodo = ({ id, todoUpdate, isUpdate, done }) => {
       />
       <Button
         text={`${isUpdate ? "Update" : "Add"}`}
-        style="w-1/5 bg-[#6459F5] hover:bg-[#4134f8]   rounded text-white font-bold p-2"
+        style="w-1/5 bg-[#6459F5] hover:bg-[#4134f8] md:text-[18px] text-[15px] focus:outline-none   rounded text-white font-bold p-2 "
         handleClick={isUpdate ? handleUpdate : handleSubmit}
       />
     </section>

@@ -47,9 +47,6 @@ export const todosSlice = createSlice({
       );
     },
     updateFilter: (state, action) => {
-      // state.todos = state.todos.map((el) =>
-      //   el.id == action.payload.id ? { ...el, todo: action.payload.todo } : el
-      // );
       state.filterBy = action.payload.filterBy;
     },
   },
