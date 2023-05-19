@@ -20,10 +20,10 @@ const App = () => {
   return (
     <MainLayout>
       <ContentLayout>
-        <h1 className="text-[#293845] text-[29px] font-extrabold">
+        <h1 className="text-[#293845] md:text-[29px] text-[23px] font-extrabold">
           What's the plan for today ?
         </h1>
-        <section className="flex flex-col w-full gap-y-[45px] ">
+        <section className="flex flex-col w-full md:gap-y-[45px] gap-y-[35px] ">
           <InputTodo
             id={id}
             todoUpdate={todo}

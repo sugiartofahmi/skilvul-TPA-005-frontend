@@ -7,7 +7,7 @@ const Checkbox = ({ value, isChecked, handleChange }) => {
       checked={isChecked}
       onChange={handleChange}
       type="checkbox"
-      className="cursor-pointer w-7 h-7 focus:ring-0 accent-gray-500 "
+      className="cursor-pointer md:w-7 w-5  md:h-7 h-5 focus:ring-0 accent-gray-500 "
     />
   );
 };

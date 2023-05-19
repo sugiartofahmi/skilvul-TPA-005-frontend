@@ -5,7 +5,7 @@ const TextField = ({ text, handleChange, name, value }) => {
     <input
       onChange={handleChange}
       value={value}
-      className=" text-[#293845] capitalize w-4/5 border-2 border-[#CFD7DC] rounded p-2 placeholder:font-bold placeholder:text-[#c6d0d6]  focus:outline-none focus:ring-0"
+      className=" text-[#293845] placeholder:md:text-[18px] placeholder:text-[15px] capitalize w-4/5 border-2 border-[#CFD7DC] rounded p-2 placeholder:font-bold placeholder:text-[#c6d0d6]  focus:outline-none focus:ring-0"
       placeholder={text}
       type="text"
       name={name}

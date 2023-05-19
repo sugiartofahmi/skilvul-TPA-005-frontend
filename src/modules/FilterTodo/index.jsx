@@ -29,7 +29,6 @@ const FilterTodo = () => {
         filterBy: filter,
       })
     );
-    console.log(selectFilter);
   };
 
   return (
@@ -38,7 +37,7 @@ const FilterTodo = () => {
         <Button
           key={i}
           text={el.filter}
-          style={`text-xs font-bold py-1 px-3 rounded-full text-white ${
+          style={`md:text-[12px] text-[11px]  font-bold py-1 px-3 rounded-full text-white ${
             el.filter == filterBy ? `bg-[#1BAF9F]` : `bg-[#788997]`
           }`}
           handleClick={() => {
