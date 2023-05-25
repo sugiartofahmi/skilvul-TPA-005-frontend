@@ -1,5 +1,5 @@
-import MainLayout from "@/components/templates/MainLayout";
-import ContentLayout from "@/components/templates/ContentLayout";
+import MainTemplate from "@/components/templates/MainTemplate";
+import ContentTemplate from "@/components/templates/ContentTemplate";
 import InputTodo from "@/modules/todo/InputTodo";
 import ListTodo from "@/modules/todo/ListTodo";
 import FilterTodo from "@/modules/todo/FilterTodo";
@@ -70,8 +70,8 @@ const TodoApp = () => {
     }));
 
   return (
-    <MainLayout>
-      <ContentLayout>
+    <MainTemplate>
+      <ContentTemplate>
         <h1 className="text-[#293845] md:text-[29px] text-[23px] font-extrabold">
           What's the plan for today?
         </h1>
@@ -94,8 +94,8 @@ const TodoApp = () => {
             />
           </div>
         </div>
-      </ContentLayout>
-    </MainLayout>
+      </ContentTemplate>
+    </MainTemplate>
   );
 };
 
