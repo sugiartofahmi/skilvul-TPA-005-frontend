@@ -1,12 +1,12 @@
 import { PropTypes } from "prop-types";
 
-const TextField = ({ text, handleChange, name, value }) => {
+const TextField = ({ placeholder, onChange, name, value }) => {
   return (
     <input
-      onChange={handleChange}
+      onChange={onChange}
       value={value}
       className=" text-[#293845] placeholder:md:text-[18px] placeholder:text-[15px] capitalize w-4/5 border-2 border-[#CFD7DC] rounded p-2 placeholder:font-bold placeholder:text-[#c6d0d6]  focus:outline-none focus:ring-0"
-      placeholder={text}
+      placeholder={placeholder}
       type="text"
       name={name}
     />
