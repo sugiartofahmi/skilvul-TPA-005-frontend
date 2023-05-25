@@ -1,5 +1,5 @@
 import { PropTypes } from "prop-types";
-const MainLayout = ({ children }) => {
+const MainTemplate = ({ children }) => {
   return (
     <main className="flex flex-col font-sora items-center w-full h-full ">
       {children}
@@ -7,8 +7,8 @@ const MainLayout = ({ children }) => {
   );
 };
 
-MainLayout.propTypes = {
+MainTemplate.propTypes = {
   children: PropTypes.node,
 };
 
-export default MainLayout;
+export default MainTemplate;
