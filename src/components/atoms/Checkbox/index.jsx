@@ -1,11 +1,11 @@
 import { PropTypes } from "prop-types";
 
-const Checkbox = ({ value, isChecked, handleChange }) => {
+const Checkbox = ({ value, checked, onChange }) => {
   return (
     <input
       value={value}
-      checked={isChecked}
-      onChange={handleChange}
+      checked={checked}
+      onChange={onChange}
       type="checkbox"
       className="cursor-pointer md:w-7 w-5  md:h-7 h-5 focus:ring-0 accent-gray-500 "
     />
@@ -14,8 +14,8 @@ const Checkbox = ({ value, isChecked, handleChange }) => {
 
 Checkbox.propTypes = {
   value: PropTypes.string,
-  isChecked: PropTypes.bool,
-  handleChange: PropTypes.func,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func,
 };
 
 export default Checkbox;

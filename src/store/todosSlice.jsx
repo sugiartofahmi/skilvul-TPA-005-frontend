@@ -6,17 +6,17 @@ export const todosSlice = createSlice({
     todos: [
       {
         id: 1,
-        todo: "Learn React",
-        completed: true,
+        todo: "Buy Milk",
+        completed: false,
       },
       {
         id: 2,
-        todo: "Learn Redux",
+        todo: "Buy Egg",
         completed: true,
       },
       {
         id: 3,
-        todo: "Learn Docker",
+        todo: "Buy T-Shirt",
         completed: false,
       },
     ],

@@ -1,7 +1,7 @@
 import { PropTypes } from "prop-types";
-const Button = ({ text, handleClick, style }) => {
+const Button = ({ text, onClick, className }) => {
   return (
-    <button onClick={handleClick} className={style}>
+    <button onClick={onClick} className={className}>
       {text}
     </button>
   );
@@ -9,8 +9,8 @@ const Button = ({ text, handleClick, style }) => {
 
 Button.propTypes = {
   text: PropTypes.string,
-  style: PropTypes.string,
-  handleClick: PropTypes.func,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Button;

@@ -1,6 +1,16 @@
-import Button from "../../components/Button";
-
+import Button from "@/components/atoms/Button";
+import { useSelector, useDispatch } from "react-redux";
+import { updateFilter } from "@/store/todosSlice";
 const FilterTodo = () => {
+  const filter = useSelector((state) => state.todos.filterBy);
+  const dispatch = useDispatch();
+  const handleFilter = (filter) =>
+    dispatch(
+      updateFilter({
+        filterBy: filter,
+      })
+    );
+
   const selectFilter = [
     {
       id: 1,
@@ -22,12 +32,10 @@ const FilterTodo = () => {
         <Button
           key={i}
           text={el.filter}
-          style={`md:text-[12px] text-[11px]  font-bold py-1 px-3 rounded-full text-white ${
-            el.filter == "ALL" ? `bg-[#1BAF9F]` : `bg-[#788997]`
+          className={`md:text-[12px] text-[11px]  font-bold py-1 px-3 rounded-full text-white ${
+            el.filter == filter ? `bg-[#1BAF9F]` : `bg-[#788997]`
           }`}
-          handleClick={() => {
-            handleClick(el.id, el.filter);
-          }}
+          onClick={() => handleFilter(el.filter)}
         />
       ))}
     </section>

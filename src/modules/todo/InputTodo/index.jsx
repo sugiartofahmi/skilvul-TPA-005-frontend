@@ -1,23 +1,21 @@
-import TextField from "../../components/TextField";
-import Button from "../../components/Button";
+import InputField from "@/components/molecules/InputField";
 import { PropTypes } from "prop-types";
-const InputTodo = () => {
+const InputTodo = ({ text, onClick, value, onChange }) => {
   return (
-    <section className="flex flex-row w-full md:gap-x-[20px] gap-x-[10px]">
-      <TextField name="inputTodo" text="What to do" />
-      <Button
-        text="Add"
-        style="w-1/5 bg-[#6459F5] hover:bg-[#4134f8] md:text-[18px] text-[15px] focus:outline-none   rounded text-white font-bold p-2 "
-      />
-    </section>
+    <InputField
+      text={text}
+      onClick={onClick}
+      value={value}
+      onChange={onChange}
+    />
   );
 };
 
 InputTodo.propTypes = {
-  id: PropTypes.number,
-  todoUpdate: PropTypes.string,
-  isUpdate: PropTypes.bool,
-  done: PropTypes.func,
+  text: PropTypes.string,
+  value: PropTypes.string,
+  onClick: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 export default InputTodo;
